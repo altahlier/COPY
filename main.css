@@ -1,0 +1,254 @@
+
+
+/* Drop Down Menu*/
+
+#mySidenav a {
+  position: absolute;
+  right: -100px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 120px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  right: 0;
+}
+
+#Home {
+  top: 20px;
+  background-color: #7a0019;
+}
+
+#Leadership {
+  top: 80px;
+  background-color: #ffcc33;
+}
+
+#Advising {
+  top: 165px;
+  background-color: #7a0019;
+}
+
+#Diversity {
+  top: 299px;
+  background-color: #ffcc33;
+}
+
+#Career{
+  top: 410px;
+  background-color: #7a0019;
+}
+
+/*Header */
+
+.header {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center; }
+
+
+  body{}
+    h1 {
+      font-family: Georgia, serif;
+      color: black;
+      font-size: 35px;
+      text-align: center;}
+
+    p {
+      font-family: verdana;
+      color: black;
+      font-size: 20px;
+      text-align: center;}
+
+
+/*Boxes */
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+  float:left;
+  width: 50%;
+  padding: 0 60px;
+
+
+
+}
+
+.row {margin: 0 -5px;}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+}
+
+/*Gold Card*/
+
+.card2 {
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
+  padding: 70px;
+  text-align: center;
+  background-color: #ffcc33;
+  height: 200px;
+  position: relative;
+  right: 10px;
+
+
+ }
+
+/*Maroon Card*/
+ .card1 {
+  box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 70px;
+  text-align: center;
+  background-color: #7a0019;
+  height: 200px;
+  position: relative;
+  left: 10px;
+
+
+
+
+a color: black}
+  a:link {text-decoration: none; color:white; }
+  a:hover {color: #7a0019; }
+}
+
+
+
+
+
+/*Boxes round 2 */
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.column {
+  float:left;
+  width: 50%;
+  padding: 0 60px;
+
+
+}
+
+.row {margin: 0 -4px;}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+}
+
+/*Gold Card*/
+
+.card3 {
+  box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 70px;
+  text-align: center;
+  background-color: #ffcc33;
+  height: 200px;
+  position: relative;
+  right: -11px;
+
+
+ }
+
+/*Maroon Card*/
+ .card4 {
+  box-shadow: 0 20px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 70px;
+  text-align: center;
+  background-color: #7a0019;
+  height: 200px;
+  position: relative;
+  left: -10px;
+
+
+
+
+a color: black}
+  a:link {text-decoration: none; color:white; }
+  a:hover {color: #7a0019; }
+}
+
+
+/*body 2?? */
+
+body{}
+  h1 {
+    font-family: Georgia, serif;
+    color: black;
+    font-size: 50px;
+    text-align: center;}
+
+  h4 {
+    font-family: verdana;
+    color: black;
+    font-size: 15px;
+    text-align: left;}
+
+  h3 {
+      font-family: verdana;
+      color: #ffcc33;
+      font-size: 25px;
+      text-align: left;
+}
+
+
+
+
+/*Footer */
+      footer{}
+        h2 {
+          font-family: Georgia, serif;
+          color: #D4AF37;
+          font-size: 35px;
+          text-align: center;}
+
+          p {
+            font-family: verdana;
+            color: black;
+            font-size: 15px;
+            text-align: center;}
+
+
+
+
+/* Links*/
+
+  a{ color: black}
+  a:hover {color: #7a0019; }
+  a:link {text-decoration: none; }

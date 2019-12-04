@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<style>
+.filterDiv {
+  float: left;
+  background-color: #7a0019;
+  color: #ffcc33;
+  width: 117px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
+
+.show {
+  display: block;
+  font-size: 12px;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+<!-- remove underline from links -->
+<style>
+a{text-decoration: none;}
+a:hover {color: white; }
+a{ color: #ffcc33}
+</style>
+
+<body>
+
+<h2>Find CLA UGE Staff by Office Location</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+
+
+  <!-- Appleby Hall (2) -->
+  <button class="btn" onclick="filterSelection('APH2')">Appleby Hall 2</button>
+  <button class="btn" onclick="filterSelection('APH33')">Appleby Hall 33</button>
+
+  <!-- Bruininks Hall (2) -->
+  <button class="btn" onclick="filterSelection('BRUH411')">Bruininks Hall 411</button>
+  <button class="btn" onclick="filterSelection('BRUH511')">Bruininks Hall 511</button>
+
+  <!-- Folwell Hall (1) -->
+  <button class="btn" onclick="filterSelection('FOLH220')">Folwell Hall 220</button>
+
+  <!-- Ford Hall (1) -->
+  <button class="btn" onclick="filterSelection('FORD404')">Ford Hall 404</button>
+
+  <!-- Hanson Hall (1) -->
+  <button class="btn" onclick="filterSelection('HMH101')">Hanson Hall 4-101</button>
+
+  <!-- Heller Hall (2) -->
+  <button class="btn" onclick="filterSelection('HEL230')">Heller Hall 230</button>
+  <button class="btn" onclick="filterSelection('HEL575')">Heller Hall 575</button>
+
+<!-- Johnston Hall (8) -->
+  <button class="btn" onclick="filterSelection('JOHNB10')">Johnston Hall B10</button>
+  <button class="btn" onclick="filterSelection('JOHN14')">Johnston Hall 14</button>
+  <button class="btn" onclick="filterSelection('JOHN16')">Johnston Hall 16</button>
+  <button class="btn" onclick="filterSelection('JOHN105')">Johnston Hall 105</button>
+  <button class="btn" onclick="filterSelection('JOHN106')">Johnston Hall 106</button>
+  <button class="btn" onclick="filterSelection('JOHN114')">Johnston Hall 114</button>
+  <button class="btn" onclick="filterSelection('JOHN115')">Johnston Hall 115</button>
+  <button class="btn" onclick="filterSelection('JOHN135')">Johnston Hall 135</button>
+
+<div class="container">
+
+<!-- A -->
+ <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Abby+Trout&campus=a&role=any">
+   Abby Trout</a></div>
+ <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Adriana+Taborda&campus=a&role=any">
+   Adriana Taborda</a></div>
+  <div class="filterDiv JOHN14"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Alex+Dausch&campus=a&role=any">
+    Alex Dausch</a></div>
+  <div class="filterDiv APH33"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Alexander+Hines&campus=a&role=any">
+    Alexander Hines</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=nelson18">
+    Ali Nelson</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Alison+Blomster&campus=a&role=any">
+    Alison Blomster</a></div>
+  <div class="filterDiv JOHN114"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Amy+Foster&campus=a&role=any">
+    Amy Foster</a></div>
+  <div class="filterDiv JOHNB10"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Amy+Palmer&campus=a&role=any">
+    Amy Palmer</a></div>
+  <div class="filterDiv JOHN114"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=Internet+ID&CN=wils1243&campus=a&role=sta">
+    Andrew Wilson</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Angie+Sturtevant&campus=a&role=any">
+    Angie Sturtevant</a></div>
+  <div class="filterDiv HMH101"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Annie+Bigley&campus=a&role=any">
+    Annie Bigley</a></div>
+  <div class="filterDiv JOHN115"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Ascan+Koerner&campus=a&role=any">
+    Ascan Koerner</a></div>
+  <div class="filterDiv BRUH511"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Ashley+Chang&campus=a&role=any">
+    Ashley Chang</a></div>
+
+<!-- B -->
+  <div class="filterDiv BRUH511"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Barbara+Goodwin&campus=a&role=any">
+    Barbara Goodwin</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Bavi+Weston&campus=a&role=any">
+    Bavi Weston</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Beth+Lory&campus=a&role=any">
+    Beth Lory</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Berne+Christiansen&campus=a&role=any">
+    Berne Christiansen</a></div>
+  <div class="filterDiv JOHN115"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Brooke+Nesbitt&campus=a&role=any">
+    Brooke Nesbitt</a></div>
+
+<!-- C -->
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Carmen+Kurdziel&campus=a&role=any">
+    Carmen Kurdziel</a></div>
+  <div class="filterDiv BRUH511"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Chad+Horsley&campus=a&role=any">
+    Chad Horsley</a></div>
+  <div class="filterDiv APH33"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Charissa+Blue&campus=a&role=any">
+    Charissa Blue-Downs</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Charlene+Myers&campus=a&role=any">
+  Charlene Myers</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=grafs002">
+    Charles Grafstrom</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Chelsea+Ochoa&campus=a&role=any">
+    Chelsea Ochoa</a></div>
+  <div class="filterDiv JOHN115"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Christie+Her&campus=a&role=any">
+    Christie Her</a></div>
+  <div class="filterDiv JOHN135"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Christopher+Moore&campus=a&role=any">
+    Christopher Moore</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=moorec">
+    Christopher Xaphakdy</a></div>
+  <div class="filterDiv BRUH511"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Cindi+Chieu&campus=a&role=any">
+    Cindi Chieu</a></div>
+  <div class="filterDiv FOLH220"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Claudia+Hasegawa&campus=a&role=any">
+    Claudia Hasegawa</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Claire+Hilgeman&campus=a&role=any">
+    Claire Hilgeman</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Clint+Bueling&campus=a&role=any">
+    Clint Bueling</a></div>
+  <div class="filterDiv JOHN105"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Colin+DeLong&campus=a&role=any">
+    Colin DeLong</a></div>
+
+<!-- D-->
+  <div class="filterDiv JOHN105"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Dan+Hoch&campus=a&role=any">
+    Dan Hoch</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Daniel+Butler&campus=a&role=any">
+    Daniel Butler</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=DeAnn+Strenke&campus=a&role=any">
+    DeAnn Strenke</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Delia+Woodward&campus=a&role=any">
+    Delia Woodward</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Douglas+Saldana&campus=a&role=any">
+    Douglas Saldana</a></div>
+
+<!-- E-->
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Emily+Gasperlin&campus=a&role=any">
+    Emily Gasperlin</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=eloudon">
+    Emily Loudon</a></div>
+  <div class="filterDiv JOHN105"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Eric+Perrino&campus=a&role=any">
+    Eric Perrino</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Erica+Tealey&campus=a&role=any">
+    Erica Tealey</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Erin+Parsons&campus=a&role=any">
+    Erin Parsons</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Erin+Reichelt&campus=a&role=any">
+    Erin Reichelt</a></div>
+  <div class="filterDiv APH33"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=joh07028">
+    Evan Johnson</a></div>
+
+<!-- G-->
+  <div class="filterDiv APH33"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Gayle+Smaller&campus=a&role=any">
+    Gayle Smaller Jr.</a></div>
+  <div class="filterDiv APH33"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Gennise+Wilson&campus=a&role=any">
+    Gennise Wilson</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=orellg">
+    Gerardo Orellana</a></div>
+
+<!-- H-->
+  <div class="filterDiv BRUH511"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Holly+Twiford&campus=a&role=any">
+    Holly Twiford</a></div>
+
+<!-- J-->
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Jacob+Rudy&campus=a&role=any">
+    Jacob Rudy</a></div>
+  <div class="filterDiv JOHN114"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Jadah+Green&campus=a&role=any">
+    Jadah Green</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Jean+Merrill&campus=a&role=any">
+    Jean Merrill</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Jeanette+Bowman&campus=a&role=any">
+    Jeanette Bowman</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=vassa001">
+    Jeniffer Vassallo</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Jennifer+Callinan&campus=a&role=any">
+    Jennifer Callinan</a></div>
+  <div class="filterDiv JOHNB10"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Jennifer+Endres&campus=a&role=any">
+    Jennifer Endres</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Jennifer+McCormack&campus=a&role=any">
+    Jennifer McCormack</a></div>
+  <div class="filterDiv APH33"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Jennifer+Thonedara&campus=a&role=any">
+    Jennifer Thonedara</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Jeremy+Bergerson&campus=a&role=any">
+    Jeremy Bergerson</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=John+Edmonds&campus=a&role=any">
+    John Edmonds</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=John+Wetzel&campus=a&role=any">
+    John Wetzel</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Joyce+Halverson&campus=a&role=any">
+    Joyce Halverson</a></div>
+  <div class="filterDiv APH2"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=tell0037">
+    Juan Telles</a></div>
+  <div class="filterDiv FORD404"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Judith+Katz&campus=a&role=any">
+    Judith Katz</a></div>
+  <div class="filterDiv JOHN106"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Judy+Anderson&campus=a&role=any">
+    Judy Anderson</a></div>
+
+<!-- K-->
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Kamille+Hakes&campus=a&role=any">
+    Kamille Hakes</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=kathryn+casey&campus=a&role=any">
+    Kathryn Casey</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Kathryn+Kluegel&campus=a&role=any">
+    Kathryn Kluegel</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Katy+Hinz&campus=a&role=any">
+    Katy Hinz</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=yenne001">
+    Keelin Yeeney</a></div>
+  <div class="filterDiv JOHN105"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Kendrick+Erickson&campus=a&role=any">
+    Kendrick Erickson</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Kersten+Falvey&campus=a&role=any">
+    Kersten Falvey</a></div>
+
+<!-- L-->
+  <div class="filterDiv JOHN114"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Laila+Agily&campus=a&role=any">
+    Laila Agily</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=peder041">
+    Lara Pedersen</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Laura+Heilman&campus=a&role=any">
+    Laura Heilman</a></div>
+  <div class="filterDiv APH33"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Leah+Milojevic&campus=a&role=any">
+    Leah Milojevic</a></div>
+  <div class="filterDiv JOHN115"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Les+Opatz&campus=a&role=any">
+    Les Opatz</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Leslie+Boey&campus=a&role=any">
+    Leslie Boey</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Lisa+Clark&campus=a&role=any">
+    Lisa Clark</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Lisa+Folch&campus=a&role=any">
+    Lisa Folch</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Lisa+Murphy&campus=a&role=any">
+    Lisa Murphy Filhart</a></div>
+  <div class="filterDiv BRUH511"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Lisa+Thomas&campus=a&role=any">
+    Lisa Thomas</a></div>
+
+<!-- M-->
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Maggie+Heier&campus=a&role=any">
+    Maggie Heier</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Margaret+Rodgers&campus=a&role=any">
+    Margaret Rodgers</a></div>
+  <div class="filterDiv APH33"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Marisela+Rodriguez-Gutierrez&campus=a&role=any">
+    Marisela Gutierrez</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Marlena+Yang&campus=a&role=any">
+    Marlena Yang</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Mattia+Beghelli&campus=a&role=any">
+    Mattia Beghelli</a></div>
+  <div class="filterDiv JOHNB10"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Meagan+Hagerty&campus=a&role=any">
+    Meagan Hagerty</a></div>
+  <div class="filterDiv BRUH511"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Megan+Boyd&campus=a&role=any">
+    Megan Boyd</a></div>
+  <div class="filterDiv APH33"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=joh13961">
+    Melanie Johnson</a></div>
+  <div class="filterDiv JOHN115"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Melissa+Grosso&campus=a&role=any">
+    Melissa Grosso</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Michelle+Livingston&campus=a&role=any">
+    Michelle Livingston</a></div>
+
+<!-- N-->
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Nancy+Welch&campus=a&role=any">
+    Nancy Welch</a></div>
+  <div class="filterDiv JOHN106"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Nanette+Hanks&campus=a&role=any">
+    Nanette Hanks</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Natasha+Bellefeuille&campus=a&role=any">
+    Natasha Bellefeuille</a></div>
+  <div class="filterDiv BRUH411"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Nick+Goffard&campus=a&role=any">
+    Nick Goffard</a></div>
+
+  <!-- P-->
+  <div class="filterDiv JOHNB10"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=yang2901">
+    Pang Yang</a></div>
+  <div class="filterDiv JOHN114"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Patricia+DelVecchio&campus=a&role=any">
+    Patricia DelVecchio</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Peter+Harle&campus=a&role=any">
+    Peter Harle</a></div>
+
+  <!-- Q-->
+  <div class="filterDiv APH2"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Quinn+Nelson+&campus=a&role=any">
+    Quinn Nelson</a></div>
+
+  <!-- R-->
+  <div class="filterDiv JOHN135"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Robbie+Reisdorf&campus=a&role=any">
+    Robby Reisdorf</a></div>
+  <div class="filterDiv APH2"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Rod+Lauture&campus=a&role=any">
+    Rodrigue Lature</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Rosanne+Duffee&campus=a&role=any">
+    Rosanne Duffee</a></div>
+  <div class="filterDiv JOHN114"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Russell+Nour&campus=a&role=any">
+    Russell Nour</a></div>
+
+  <!-- S-->
+  <div class="filterDiv JOHN114"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Sagey+Sway&campus=a&role=any">
+    Sagey Sway</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Sarah+Campbell&campus=a&role=any">
+    Sarah Campbell</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=stei0357">
+    Sarah Stein</a></div>
+  <div class="filterDiv APH2"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Sonyna+Castillo&campus=a&role=any">
+    Sonyna Castillo</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Stephanie+Lawrence&campus=a&role=any">
+    Stephanie Lawrence</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Stephen+Young&campus=a&role=any">
+    Stephen Young</a></div>
+  <div class="filterDiv JOHN114"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=baker571">
+    Steve Baker</a></div>
+  <div class="filterDiv JOHN105"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Swapnik+Shah&campus=a&role=any">
+    Swapnik Shah</a></div>
+
+  <!-- T-->
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Tammy+Newcomb&campus=a&role=any">
+    Tammy Newcomb</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Ted+Fitch&campus=a&role=any">
+    Ted Fitch</a></div>
+  <div class="filterDiv JOHN106"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Terri+Grimlund&campus=a&role=any">
+    Terri Grimlund</a></div>
+  <div class="filterDiv APH2"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&UID=moua0104">
+    Thao Pao Moua</a></div>
+  <div class="filterDiv HEL575"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Therese+Djei&campus=a&role=any">
+    Therese Djei</a></div>
+  <div class="filterDiv HMH101"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Tiffany+Murphy&campus=a&role=any">
+    Tiffany Murphy</a></div>
+  <div class="filterDiv HEL230"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Tim+Dohmen&campus=a&role=any">
+    Tim Dohmen</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=True+Xiong&campus=a&role=any">
+    True Xiong</a></div>
+
+<!-- V-->
+  <div class="filterDiv BRUH511"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Valerie+Bertsch&campus=a&role=any">
+    Valerie Bertsch</a></div>
+
+<!-- W-->
+  <div class="filterDiv JOHN115"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Walter+Goodwin&campus=a&role=any">
+    Walter Goodwin</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=Wendy+Nicholson&campus=a&role=any">
+    Wendy Nicholson</a></div>
+  <div class="filterDiv JOHN16"><a href="https://myaccount.umn.edu/lookup?SET_INSTITUTION=UMNTC&type=name&CN=William+Solheim&campus=a&role=any">
+    William Solheim</a></div>
+
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
