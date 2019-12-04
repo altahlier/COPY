@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html>
+
+<!-- Menu-->
+<div id="mySidenav" class="sidenav">
+  <a href="index.html" id="Home">&nbsp;Home</a>
+  <a href="Leadership.html" id="Leadership">&nbsp;Leadership &nbsp;Team</a>
+  <a href="Advising.html" id="Advising">&nbsp;Advising &nbsp;and &nbsp;Student &nbsp;Services</a>
+  <a href="Diversity.html" id="Diversity">&nbsp;Diversity, &nbsp;Equity,&nbsp;and &nbsp;Inclusion</a>
+  <a href="Career.html" id="Career">&nbsp;Career &nbsp;Services</a>
+	<a href="filter.html" id="Filter">&nbsp;Find &nbsp;Staff</a>
+</div>
+
+
 <!-- UMN Logo -->
 <header>
 <div class="header">
@@ -11,6 +23,56 @@
 </header>
 
 <style>
+
+/* Drop Down Menu*/
+
+#mySidenav a {
+  position: absolute;
+  right: -132px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 120px;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  font-family: verdana;
+}
+
+#mySidenav a:hover {
+  right: 0;
+}
+
+#Home {
+  top: 20px;
+  background-color: #7a0019;
+}
+
+#Leadership {
+  top: 80px;
+  background-color: #ffcc33;
+}
+
+#Advising {
+  top: 162px;
+  background-color: #7a0019;
+}
+
+#Diversity {
+  top: 265px;
+  background-color: #ffcc33;
+}
+
+#Career{
+  top: 365px;
+  background-color: #7a0019;
+}
+
+#Filter{
+  top: 455px;
+  background-color: #ffcc33;
+}
+
 .filterDiv {
   float: left;
   background-color: #7a0019;
@@ -40,6 +102,7 @@
   background-color: #f1f1f1;
   cursor: pointer;
   margin: 3px;
+  display: inline-flex;
 }
 
 .btn:hover {
@@ -58,7 +121,12 @@
   padding: 20px;
   text-align: center; }
 
-
+  .footer{}
+    h2 {
+      font-family: Georgia, serif;
+      color: #black;
+      font-size: 45px;
+      text-align: center;}
 
 </style>
 <!-- remove underline from links -->
@@ -71,6 +139,7 @@ a{ color: #ffcc33}
 <body>
 
 <h2>Find CLA UGE Staff by Office Location</h2>
+
 
 <div id="myBtnContainer">
   <button class="btn active" onclick="filterSelection('all')"> Show all</button>
@@ -445,17 +514,16 @@ for (var i = 0; i < btns.length; i++) {
 <br>
 <br>
 <br>
-<footer id="footer">
-					<div class="inner">
-<h3>
-<a href="https://neighborhood.cla.umn.edu/undergraduate-education" class="logo">
-  <font face="georgia" color="black"size="6.5"><center>
-<span class="title">College of Liberal Arts</span></a>
-</center></font></h3>
-<font face="verdana" color="black"size="3"><center><p>101 Pleasant Street SE, Minneapolis, MN, 55433</center></font></p>
 
 
-</div>
-      </footer>
+
 </body>
+<p>
+<a href="https://neighborhood.cla.umn.edu/undergraduate-education" class="logo">
+  <font face="georgia" color="black" size="6" ><center>
+<strong>College of Liberal Arts</strong></a>
+</center></font></p>
+<br>
+<font face="verdana" color="black"size="3"><center><p1>101 Pleasant Street SE, Minneapolis, MN, 55433</center></font></p1>
+
 </html>
